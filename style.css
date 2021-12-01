@@ -1,0 +1,87 @@
+html {
+  font-family: Arial;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: left;
+  background-color: #342e2e;
+  border: solid 1rem white;
+  padding: 2rem 3rem;
+  padding-bottom: 0rem;
+}
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+h1 {
+  margin-top: 1rem;
+  margin-left: 0rem;
+  color: #9a9ca1;
+  margin-bottom: 3rem;
+}
+p {
+  color: #9a9ca1;
+  font-size: 1.5rem;
+}
+.marker{
+  color: #f3d6d6;
+  font-size: 1.2rem;
+}
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  color: #f3d6d6;
+  padding: 16px 40px;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
+.button1 {
+  background-color: #008CBA;
+}
+.button1:hover {
+  background-color: #0f5c75;
+}
+.button2 {
+  background-color: #f44336;
+}
+.button2:hover {
+  background-color: #a83028;
+}
+.button3{
+  background-color: #4bf02a;
+}
+.button3:hover{
+  background-color: #2c791c;
+}
+.smartFanImage{
+  width: 17rem;
+}
+.smartFanImageColorRed{
+  filter: invert(53%) sepia(100%) saturate(5849%) hue-rotate(343deg) brightness(101%) contrast(104%);
+}
+.smartFanImageColorBlue{
+  filter: invert(43%) sepia(14%) saturate(5164%) hue-rotate(161deg) brightness(90%) contrast(102%);
+}
+.smartFanImageColorGreen{
+  filter: invert(87%) sepia(33%) saturate(4147%) hue-rotate(54deg) brightness(98%) contrast(95%);
+}
+.units {
+  font-size: 1.2rem;
+}
+.sensor-labels {
+  font-size: 1.5rem;
+  vertical-align:middle;
+  padding-bottom: 15px;
+}
+.referenceText{
+  text-align:center;
+  color: rgb(211, 208, 208);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.referenceText a{
+  color: rgb(118, 119, 233);
+}

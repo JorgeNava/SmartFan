@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Smart Fan Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>My Smart Fan Server</h1>
+      <p>Fan state: <strong class="marker">%STATE%</strong></p>
+      <p>
+        <span class="sensor-labels">Actual temperature: </span>
+        <span class="marker" id="temperature">%TEMPERATURE%</span>
+        <sup class="units marker">&deg;C</sup>
+      </p>
+      <p>
+        <a href="/on" onclick = "chageColor('Blue')"><button class="button button1">ON</button></a>
+        <a href="/off"  onclick = "chageColor('Red')"><button class="button button2">OFF</button></a>
+        <a href="/auto"  onclick = "chageColor('Green')"><button class="button button3">AUTO</button></a>
+      </p>
+    </div>
+    <div>
+      <img id="fanImage" class="smartFanImage" src="./assets/fan2.svg" alt="smart-fan-image">
+    </div>
+  </div>
+  <p class="referenceText">
+    This application was developed by <a href="https://github.com/GustavoGarciaDeAlba">@GustavoGarciaDeAlba</a> and <a href="https://github.com/JorgeNava">@JorgeNava</a> for IoT class.
+  </p>
+</body>
+<script>
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperature").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "/temperature", true);
+    xhttp.send();
+  }, 10000 ) ;
+
+  function chageColor(color) {  
+    document.getElementById('fanImage').className = 'smartFanImage smartFanImageColor'+color;
+  }  
+</script>
+</html>
